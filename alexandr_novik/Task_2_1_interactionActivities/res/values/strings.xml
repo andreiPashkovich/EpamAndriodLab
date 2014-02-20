@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Task_2_1</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Task_1_authorization">Task 1: authorization</string>
+    <string name="User_email">Email</string>
+    <string name="User_password">Password</string>
+    <string name="Button_logIn">LogIn</string>
+    <string name="Button_Registratoin">Registration</string>
+    <string name="Button_to_Task_2">Next task</string>
+    <string name="Registration_user_name">Name</string>
+    <string name="Registration_user_email">Email</string>
+    <string name="Registration_user_password">Password</string>
+    <string name="Registration_Button_Ok">OK</string>
+    <string name="Registration_Button_Cansel">Cansel</string>
+    <string name="LogInActivitySucsess">Login is successful</string>
+    <string name="LogInActivityNameIs">You name is: </string>
+    <string name="LogInActivityNameTransfer"></string>
+    <string name="LogInActivity_Button_back">back</string>
+    <string name="Task_3_metro">Task 3: scale and rotate image</string>
+    <string name="Button_getGallary">From gallery..</string>
+    <string name="Button_getGallarySet">Set</string>
+    <string name="Button_getMetro">Metro</string>
+    <string name="Task_2_parsing">Task 2: parse HTML</string>
+
+</resources>
