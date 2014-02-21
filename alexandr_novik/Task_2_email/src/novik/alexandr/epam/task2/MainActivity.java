@@ -1,5 +1,6 @@
-package novik.alexandr.epam.task_2;
+package novik.alexandr.epam.task2;
 
+import novik.alexandr.epam.task_2.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -16,13 +17,15 @@ import android.widget.TextView;
  */
 public class MainActivity extends Activity {
 
-    EditText edittextEmailAddress, edittextEmailSubject, edittextEmailText;
-    TextView textPath;
-    Button buttonSelectImage, buttonSendEmail_intent, buttonSelectVideo;
-
-    final int RQS_LOAD = 0;
-
-    Uri dataUri;
+    private EditText edittextEmailAddress;
+    private EditText edittextEmailSubject;
+    private EditText edittextEmailText;
+    private TextView textPath;
+    private Button buttonSelectImage;
+    private Button buttonSendEmail_intent;
+    private Button buttonSelectVideo;
+    private Uri dataUri;
+    public static final int RQS_LOAD = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

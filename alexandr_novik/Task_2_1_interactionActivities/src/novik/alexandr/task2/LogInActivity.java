@@ -1,5 +1,6 @@
-package novik.alexandr.task_2_1;
+package novik.alexandr.task2;
 
+import novik.alexandr.task_2_1.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

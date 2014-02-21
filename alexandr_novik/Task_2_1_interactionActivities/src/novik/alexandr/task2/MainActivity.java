@@ -1,7 +1,9 @@
-package novik.alexandr.task_2_1;
+package novik.alexandr.task2;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import novik.alexandr.task_2_1.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -24,12 +26,14 @@ import entity.User;
 public class MainActivity extends Activity implements OnClickListener {
 
     private static final String TAG_LOG = "myLogs";
-    EditText etEmail, etPassword;
-    Button logIn, registration;
-    MyDBHelper dbHelper;
-    Cursor cursor;
+    private EditText etEmail;
+    private EditText etPassword;
+    private Button logIn;
+    private Button registration;
+    private MyDBHelper dbHelper;
+    private Cursor cursor;
 
-    List<User> arrayList = new ArrayList<User>();
+    private List<User> arrayList = new ArrayList<User>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
