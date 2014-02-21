@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="novik.alexandr.task_2_1.MainActivity"
+            android:name="novik.alexandr.task2.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="LogInActivity"></activity>
-        <activity android:name="RegistrationActivity"></activity>
+        <activity android:name="novik.alexandr.task2.LogInActivity"></activity>
+        <activity android:name="novik.alexandr.task2.RegistrationActivity"></activity>
     </application>
 
 </manifest>
