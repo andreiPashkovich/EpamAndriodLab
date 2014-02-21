@@ -18,16 +18,16 @@ public class MainActivity extends Activity implements AnimationListener, OnClick
 	private TextView helloWorld;
 	private Button startAnim;
 	private Typeface fontType;
-	public static final String FONT = "HelveticaNeueCyr-Light.otf";
-	public static final String TAG = "Animation state: "; 
 	private Animation animation;
+	public static final String TAG = "Animation state: "; 
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		fontType = Typeface.createFromAsset(
-				getApplicationContext().getAssets(), FONT);
+				getApplicationContext().getAssets(), Constants.FONT);
 		animation = AnimationUtils.loadAnimation(getApplicationContext(),
 				R.anim.together);
 		helloWorld = (TextView) findViewById(R.id.helloWorld);
@@ -46,21 +46,21 @@ public class MainActivity extends Activity implements AnimationListener, OnClick
 	@Override
 	public void onAnimationStart(Animation animation) {
 		if (animation == this.animation) {
-			Log.d(TAG, "Анимация началась");
+			Log.d(TAG, "Animation started");
 		}
 	}
 
 	@Override
 	public void onAnimationEnd(Animation animation) {
 		if (animation == this.animation) {
-			Log.d(TAG, "Анимация закончилась");
+			Log.d(TAG, "Animation ended");
 		}
 	}
 
 	@Override
 	public void onAnimationRepeat(Animation animation) {
 		if (animation == this.animation) {
-			Log.d(TAG, "Анимация повторилась");
+			Log.d(TAG, "Animation repeated");
 		}
 	}
 
