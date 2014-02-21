@@ -25,14 +25,13 @@ import entity.User;
  */
 public class MainActivity extends Activity implements OnClickListener {
 
-    private static final String TAG_LOG = "myLogs";
+    public static final String TAG_LOG = "myLogs";
     private EditText etEmail;
     private EditText etPassword;
     private Button logIn;
     private Button registration;
-    private MyDBHelper dbHelper;
     private Cursor cursor;
-
+    private MyDBHelper dbHelper = new MyDBHelper(this);
     private List<User> arrayList = new ArrayList<User>();
 
     @Override
@@ -48,7 +47,7 @@ public class MainActivity extends Activity implements OnClickListener {
         logIn.setOnClickListener(this);
         registration.setOnClickListener(this);
 
-        putDatabaseInArrayList();
+        putDatabaseInArrayList(arrayList, dbHelper, cursor);
     }
 
     @Override
@@ -92,14 +91,14 @@ public class MainActivity extends Activity implements OnClickListener {
         etPassword.setText("");
     }
 
-    private void putDatabaseInArrayList() {
-        arrayList.clear();
+    public static void putDatabaseInArrayList(List<User> list,
+            MyDBHelper helper, Cursor cursor) {
+        list.clear();
         // open DB
-        dbHelper = new MyDBHelper(this);
-        dbHelper.open();
+        helper.open();
         // get cursor
         try {
-            cursor = dbHelper.getAllData();
+            cursor = helper.getAllData();
         } catch (Exception exception) {
         }
         // put DB in ArrayList
@@ -108,14 +107,12 @@ public class MainActivity extends Activity implements OnClickListener {
                 String str;
                 do {
                     str = "";
-                    arrayList
-                            .add(new User(
-                                    str.concat(cursor.getString(cursor
-                                            .getColumnIndex(MyDBHelper.USER_NAME))),
-                                    str.concat(cursor.getString(cursor
-                                            .getColumnIndex(MyDBHelper.USER_EMAIL))),
-                                    str.concat(cursor.getString(cursor
-                                            .getColumnIndex(MyDBHelper.USER_PASSWORD)))));
+                    list.add(new User(str.concat(cursor.getString(cursor
+                            .getColumnIndex(MyDBHelper.USER_NAME))), str
+                            .concat(cursor.getString(cursor
+                                    .getColumnIndex(MyDBHelper.USER_EMAIL))),
+                            str.concat(cursor.getString(cursor
+                                    .getColumnIndex(MyDBHelper.USER_PASSWORD)))));
 
                 } while (cursor.moveToNext());
             }

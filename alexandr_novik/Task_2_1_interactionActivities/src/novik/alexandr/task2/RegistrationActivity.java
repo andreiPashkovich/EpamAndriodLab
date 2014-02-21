@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import novik.alexandr.task_2_1.R;
-
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -12,7 +11,6 @@ import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -22,7 +20,6 @@ import database.MyDBHelper;
 import entity.User;
 
 public class RegistrationActivity extends Activity implements OnClickListener {
-    private static final String TAG_LOG = "myLogs";
     private EditText name;
     private EditText email;
     private EditText password;
@@ -66,7 +63,8 @@ public class RegistrationActivity extends Activity implements OnClickListener {
             if (!(name.getText().toString()).equals("")
                     && !(email.getText().toString()).equals("")
                     && !(password.getText().toString()).equals("")) {
-                putDatabaseInArrayList();
+                MainActivity
+                        .putDatabaseInArrayList(arrayList, dbHelper, cursor);
                 // email is a primary key, if it exist -> show toast
                 for (int i = 0; i < arrayList.size(); i++) {
                     if ((arrayList.get(i).email).equals(email.getText()
@@ -141,35 +139,5 @@ public class RegistrationActivity extends Activity implements OnClickListener {
         database.insert(MyDBHelper.getDbTable(), null, values);
         dbHelper.close();
 
-    }
-
-    private void putDatabaseInArrayList() {
-        arrayList.clear();
-        dbHelper = new MyDBHelper(this);
-        dbHelper.open();
-        try {
-            cursor = dbHelper.getAllData();
-        } catch (Exception exception) {
-        }
-        if (cursor != null) {
-            if (cursor.moveToFirst()) {
-                String str;
-                do {
-                    str = "";
-                    arrayList
-                            .add(new User(
-                                    str.concat(cursor.getString(cursor
-                                            .getColumnIndex(MyDBHelper.USER_NAME))),
-                                    str.concat(cursor.getString(cursor
-                                            .getColumnIndex(MyDBHelper.USER_EMAIL))),
-                                    str.concat(cursor.getString(cursor
-                                            .getColumnIndex(MyDBHelper.USER_PASSWORD)))));
-
-                } while (cursor.moveToNext());
-            }
-            cursor.close();
-        } else {
-            Log.d(TAG_LOG, "Cursor is null");
-        }
     }
 }
