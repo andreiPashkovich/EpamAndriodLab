@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Task2-activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="edit_message">Enter a message to send to 2nd activity</string>
+    <string name="button_send">Send to 2nd activity</string>
+    <string name="title_activity_main">Main Activity</string>
+    <string name="title_activity_activity2">Activity2</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
