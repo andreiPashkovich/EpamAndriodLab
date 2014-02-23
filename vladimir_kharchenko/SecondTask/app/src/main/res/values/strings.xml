@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SecondTask</string>
+    <string name="email_text_view">Enter an email here:</string>
+    <string name="email_edit_text_hint">xxxxxx@xxxx.xxx</string>
+    <string name="message_text_view">Enter a message here:</string>
+    <string name="next_step_button">Next Step</string>
+    <string name="action_settings">Settings</string>
+    <string name="select_image_button">Select image</string>
+    <string name="tem">Settings</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_select_picture">Step2 - Select image</string>
+    <string name="send_buton">Send</string>
+
+</resources>

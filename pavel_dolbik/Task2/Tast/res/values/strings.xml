@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Task2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tvTitle">Задание №2</string>
+    <string name="btnEmail">Отправить Email</string>
+    <string name="btnName">Познакомиться</string>
+    <string name="tvName">Вас зовут...</string>
+    <string name="tvInputName">Введите ваше имя:</string>
+    <string name="btnOk">ОК</string>
+    <string name="emailChoiser">Выберете почтовую программу</string>
+
+</resources>
