@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SendingEmail</string>
+    <string name="action_settings">Settings</string>
+    <string name="to_string">To</string>
+    <string name="subject_string">Subject</string>
+    <string name="addition_string">Add file</string>
+    <string name="sending_string">Send email</string>
+    <string name="statement_string">No file</string>
+
+</resources>
