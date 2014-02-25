@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+/Volumes/DATA/Android Training/mail_task2/.metadata/.plugins/org.eclipse.jdt.core
+553228365.index
+3690122781.index
+3341228526.index
